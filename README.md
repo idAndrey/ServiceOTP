@@ -84,7 +84,7 @@
   - Java Runtime Environment (Java 23)
   - PostgreSQL 17
   - Maven 4.0.0
-  - эмулятор SMPPsim 3.0.2
+  - эмулятор SMPPsim 3.0.2 (скачайте по [ссылке](https://github.com/delhee/SMPPSim/releases/tag/3.0.0))
 
 Создайте базу данных `service_otp`  
 
