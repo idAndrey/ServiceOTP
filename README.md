@@ -1,9 +1,9 @@
-# Сервис кодов OTP
+# Сервис кодов OTP  
 
 Сервис для создания и применения кодов One Time Password (OTP) для подтверждения выполнения тех или иных операций.  
 Код OTP отправляется пользователю по Email, в виде SMS (SMPP эмулятор), в Telegram бот или сохраняется в файл.  
 Сервис разработан на базе простого HTTP-сервера Java.
----
+
 **Для демонстрации работы сервиса** изменение пароля пользователя подтверждается с помощью кода OTP
 
 ---
@@ -110,8 +110,8 @@
 
 `XXXXXXXXXXXXXXXXXXXXXXXX`
 ```bash
-git clone https://github.com/amasovich/otpservice-protection-service.git
-cd otpservice-protection-service
+git clone https://github.com/idAndrey/ServiceOTP.git  
+cd ServiceOTP
 ```
 
 Соберите проект и запустите приложение:
@@ -142,10 +142,7 @@ curl.exe -X GET http://localhost:8080/operations -H "Content-Type: application/j
 ### Выполнение операции 101 UpdatePassword с отправкой кода OTP в Телеграм-бот
 
 ```bash
-curl.exe -X POST http://localhost:8080/operation/perform \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -d '{\"operationNumber\":101,\"channel\":\"TELEGRAM\"}'
+curl.exe -X POST http://localhost:8080/operation/perform -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_TOKEN" -d '{\"operationNumber\":101,\"channel\":\"TELEGRAM\"}'
 ```
 
 ### Подтверждение кодом OTP выполнения операции 101 UpdatePassword
